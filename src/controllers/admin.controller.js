@@ -6,7 +6,7 @@ const dateTime = require('../services/getDateTime')
 //users
 module.exports.getAllUsers = async (req, res) => {
     try {
-        const [data] = await pool.execute('select fullname, email, phone_number, address, created_at, updated_at, deleted from user where role_id = 2')
+        const [data] = await pool.execute('select fullname, email, phone_number, address, created_at, updated_at, deleted from user')
         console.log('Load all users successfull.')
         res.json(data)
     }

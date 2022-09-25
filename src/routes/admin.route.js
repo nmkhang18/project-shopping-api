@@ -4,7 +4,7 @@ const controller = require('../controllers/admin.controller')
 const router = express.Router()
 
 //user
-router.get('users-managerment', controller.getAllUsers)
+router.get('/users-managerment', controller.getAllUsers)
 //product
 router.post('/product', controller.createProduct)
 router.put('/product/:id', controller.changeProductInfo)
